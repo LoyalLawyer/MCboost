@@ -23,7 +23,7 @@ exports.handler = async function(event) {
   catch(e) { return { statusCode: 400, headers, body: JSON.stringify({ error: 'Bad request body' }) }; }
 
   const { prompt, search } = parsed;
-  const model = 'gemini-1.5-flash';
+  const model = 'gemini-2.0-flash';
   const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent?key=' + key;
 
   const reqBody = {
